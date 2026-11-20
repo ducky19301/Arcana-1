@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arcana</title>
+
+<style>
+body{
+  background:#0f172a;
+  color:white;
+  font-family:sans-serif;
+  text-align:center;
+  padding:40px;
+}
+
+button{
+  padding:15px;
+  font-size:18px;
+  border:none;
+  border-radius:8px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Arcana</h1>
+<p>Digital Tarot Reader</p>
+
+<button onclick="drawCard()">
+Draw Card
+</button>
+
+<p id="result"></p>
+
+<script>
+
+const cards = [
+"The Fool",
+"The Magician",
+"The High Priestess",
+"The Empress",
+"The Emperor"
+];
+
+function drawCard() {
+
+const card =
+cards[Math.floor(
+Math.random() * cards.length
+)];
+
+document.getElementById("result")
+.innerText = card;
+
+}
+
+</script>
+
+</body>
+</html>
